@@ -4,29 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="leftmenu.css">
-    <link rel="stylesheet" href="projects.css">
-    <link rel="stylesheet" href="client-message.css">
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="stylesheet" href="css/leftmenu.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/client-message.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/media.css">
     <title>Project Management Dashboard UI</title>
+    <script src="js/main.js"></script>
 </head>
 <body>
 <div class="body-container">
     <header class="header-container">
         <div class="header-left-container">
             <img src="images/logo.svg" width="20px">
-            <p class="portfolio-header">Portfolio</p>
+            <p class="site-header">Portfolio</p>
             <div class="search-input-container">
                 <input class="search-input" type="text" placeholder="Search"/>
                 <img src="images/search.svg" width="20px"/>
             </div>
         </div>
         <div class="header-right-container">
-            <button class="switch-theme-button" title="Switch theme">
-            <button class="add-project-button" title="Add new project">
-            <button class="notify-button" title="Notify">
+            <button class="switch-theme-button" title="Switch theme"></button>
+            <button class="add-project-button" title="Add new project"></button>
+            <button class="notify-button" title="Notify"></button>
             <div class="account-container">
                 <div class="avatar-image-container">
                     <img class="avatar-image" width="20px" height="20px" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"/>
@@ -34,7 +36,7 @@
                 <p>Creator C.</p>
             </div>
         </div>
-        <button class="client-messages-button" onclick="messageshow()">
+        <button class="client-messages-open-button" >
             <img width="20" src="images/message.svg">
         </button>    
     </header>
@@ -71,7 +73,7 @@
                </div>
             </div>
             <div class="projects-items-container">
-                <div class="project-item-wrapper">
+                <div class="project-item-wrapper project-item-wrapper-default">
                     <div class="project-item">
                         <div class="project-item-header">
                             <p>December 10, 2020</p>
@@ -80,7 +82,7 @@
                         <div class="project-item-body">
                             Web Designing<br/>Prototyping
                         </div>
-                        <div class="project-item-progress">
+                        <div class="project-item-progress-container">
                             <p>Progress</p>
                             <div class="progress-bar-wrapper">
                                 <div class="progress-bar"></div>
@@ -93,7 +95,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-item-wrapper">
+                <div class="project-item-wrapper  project-item-wrapper-default">
                     <div class="project-item">
                         <div class="project-item-header">
                             <p>December 10, 2020</p>
@@ -115,7 +117,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-item-wrapper">
+                <div class="project-item-wrapper  project-item-wrapper-default">
                     <div class="project-item">
                         <div class="project-item-header">
                             <p>December 10, 2020</p>
@@ -137,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-item-wrapper">
+                <div class="project-item-wrapper  project-item-wrapper-default">
                     <div class="project-item">
                         <div class="project-item-header">
                             <p>December 10, 2020</p>
@@ -159,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-item-wrapper">
+                <div class="project-item-wrapper  project-item-wrapper-default">
                     <div class="project-item">
                         <div class="project-item-header">
                             <p>December 10, 2020</p>
@@ -181,7 +183,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-item-wrapper">
+                <div class="project-item-wrapper  project-item-wrapper-default">
                     <div class="project-item">
                         <div class="project-item-header">
                             <p>December 10, 2020</p>
@@ -208,12 +210,13 @@
         <div class="client-messages-container">
             <div class="client-messages-container-header">
                 <p>Client Messages</p>
-                <button class="client-messages-close-button" onclick="messageclose()">
+                <button class="client-messages-close-button">
                     <img src="images/close.svg"/>
                 </button>
             </div>
+            <div class="client-messages-items-container">
             <div class="client-message-item">
-                <div class="avatar-container">
+                <div class="client-message-item-avatar-container">
                     <div class="avatar-image-container">
                         <img class="avatar-image" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"/>
                     </div>
@@ -228,7 +231,7 @@
                 </div>
             </div>
             <div class="client-message-item">
-                <div class="avatar-container">
+                <div class="client-message-item-avatar-container">
                     <div class="avatar-image-container">
                         <img class="avatar-image" src="https://images.unsplash.com/photo-1600486913747-55e5470d6f40?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80"/>
                     </div>
@@ -243,7 +246,7 @@
                 </div>
             </div>
             <div class="client-message-item">
-                <div class="avatar-container">
+                <div class="client-message-item-avatar-container">
                     <div class="avatar-image-container">
                         <img class="avatar-image" src="https://images.unsplash.com/photo-1543965170-4c01a586684e?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDZ8fG1hbnxlbnwwfDB8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"/>
                     </div>
@@ -258,7 +261,7 @@
                 </div>
             </div>
             <div class="client-message-item">
-                <div class="avatar-container">
+                <div class="client-message-item-avatar-container">
                     <div class="avatar-image-container">
                         <img class="avatar-image" src="https://images.unsplash.com/photo-1533993192821-2cce3a8267d1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTl8fHdvbWFuJTIwbW9kZXJufGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60"/>
                     </div>
@@ -272,17 +275,9 @@
                     <div class="user-footer">Dec, 11</div>    
                 </div>
             </div>
+            </div>
         </div>
-        
     </main>
 </div>
-<script>
-    function messageshow() {
-        document.querySelector('.client-messages-container').classList.add('client-messages-container-wide');
-    }
-    function messageclose() {
-        document.querySelector('.client-messages-container').classList.remove('client-messages-container-wide');
-    }
-</script>
 </body>
 </html>

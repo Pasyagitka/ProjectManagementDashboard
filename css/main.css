@@ -16,50 +16,52 @@ body {
 }
 
 button {
+    flex-shrink: 0;
     cursor: pointer;
-}
-
-.portfolio-header {
-    font-weight: 700;
+    width: 20px;
+    height: 20px;
+    background-color:transparent;
+    background-size: cover;
+    border: none;
 }
 
 .main-container {
     display: flex;
+    flex: 1;
     align-items: stretch;
     justify-content: center;
-    flex: 1;
     height: 100%;
-    overflow: hidden;
     padding: 15px 25px;
     width: 100%;
+    overflow: hidden;
 }
 
 .body-container {
     display: flex;
     flex-direction: column;
-    max-width: 1500px;
     flex: 1;
-    overflow: hidden;
-    height: 100%;
+    max-width: 1500px;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-.client-messages-button {
+.client-messages-open-button {
+    align-self: flex-end;
     background-color: #ffff;
     border-radius: 5px 0 0 5px;
     border: none;
-    width: 30px;
-    height: 30px;
-    align-self: flex-end;
     position: relative;
     top: 30px;
     display: none;
+    width: 30px;
+    height: 30px;
 }
 
 .client-messages-close-button {
     background-color: transparent;
     border: none;
+    display: none;
     width: 30px;
     height: 30px;
-    display: none;
 }

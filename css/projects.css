@@ -2,45 +2,68 @@
 .projects-container {
     display: flex;
     flex-direction: column;
+    flex: 2;
     row-gap: 20px;
     background-color: #ffffff;
     border-radius: 25px;
     margin: 15px;
     padding: 25px 25px 0 25px;
-    flex: 2;
-    overflow: hidden;
     width: 100%;
+    overflow: hidden;
 }
 
+/*header*/
 .projects-container-header {
     display: flex;
     justify-content: space-between;
     font-weight: 700;
 }
 
-/*progress*/
-.project-item-progress {
+
+/*statistics*/
+.projects-statistics-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.projects-statistics-data-container {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
+.projects-statistics-item > div:first-of-type {
     font-weight: 700;
 }
-.project-item-progress > p:first-of-type {
+.projects-statistics-item > div:last-of-type {
+    color: #85848d;
+    font-size: 0.6em;
+}
+
+
+/*progress*/
+.project-item-progress-container {
+    font-weight: 700;
+}
+.project-item-progress-container > p:first-of-type {
     text-align: start;
 }
-.project-item-progress > p:last-of-type {
+.project-item-progress-container > p:last-of-type {
     text-align: end;
 }
 .progress-bar-wrapper { 
-    height: 5px;
-    width: 100%;
     background-color: white;
-    margin: 2px 0;
     border-radius: 5px;
+    margin: 2px 0;
+    width: 100%;
+    height: 5px;
 }
 .progress-bar {
     background-color: #ff942e;
+    border-radius: inherit;
     width: 60%;
     height: 5px;
-    border-radius: inherit;
 }
+
 
 /*items-container*/
 .projects-items-container {
@@ -51,7 +74,8 @@
     overflow-y: auto;
     height: 100%;
 }
-.projects-items-container  .project-item-wrapper:nth-child(2) .project-item {
+.projects-items-container  .project-item-wrapper:nth-child(2) .project-item, 
+.projects-items-container  .project-item-wrapper-row:nth-child(2) .project-item {
     background-color: #e9e7fd;
 }
 .projects-items-container > :nth-child(2) .days-left-sign {
@@ -60,7 +84,8 @@
 .projects-items-container > :nth-child(2) .progress-bar {
     background-color: #4f3ff0;
 }
-.projects-items-container .project-item-wrapper:nth-child(3) .project-item {
+.projects-items-container .project-item-wrapper:nth-child(3) .project-item, 
+.projects-items-container .project-item-wrapper-row:nth-child(3) .project-item {
     background-color: #dbf6fd;
 }
 .projects-items-container > :nth-child(3) .days-left-sign {
@@ -69,7 +94,8 @@
 .projects-items-container > :nth-child(3) .progress-bar {
     background-color: #096c86;
 }
-.projects-items-container .project-item-wrapper:nth-child(4) .project-item {
+.projects-items-container .project-item-wrapper:nth-child(4) .project-item, 
+.projects-items-container .project-item-wrapper-row:nth-child(4) .project-item {
     background-color: #ffd3e2;
 }
 .projects-items-container > :nth-child(4) .days-left-sign {
@@ -79,7 +105,8 @@
     background-color: #df3670;
 }
 
-.projects-items-container .project-item-wrapper:nth-child(5) .project-item {
+.projects-items-container .project-item-wrapper:nth-child(5) .project-item,
+.projects-items-container .project-item-wrapper-row:nth-child(5) .project-item {
     background-color: #c8f7dc;
 }
 .projects-items-container > :nth-child(5) .days-left-sign {
@@ -89,7 +116,8 @@
     background-color: #34c471;
 }
 
-.projects-items-container .project-item-wrapper:nth-child(6) .project-item {
+.projects-items-container .project-item-wrapper:nth-child(6) .project-item,
+.projects-items-container .project-item-wrapper-row:nth-child(6) .project-item {
     background-color: #d5deff;
 }
 .projects-items-container > :nth-child(6) .days-left-sign {
@@ -103,15 +131,12 @@
 
 
 /*project-item*/
-.project-item-wrapper {
-    width: 33.3%;
-    padding: 7px;
-}
+
 
 .project-item {
     background-color: #fee4cb;
-    padding: 15px;
     border-radius: 25px;
+    padding: 15px;
     font-size: 0.6em;
 }
 
@@ -134,68 +159,38 @@
     display: flex;
     justify-content: space-between;
     border-top: white 1px solid;
-    padding: 10px 0 0 0;
     color: #ff942e;
+    padding: 10px 0 0 0;
 }
 
 .days-left-sign {
     background-color: #ffffff;
-    width: fit-content;
-    padding: 5px 20px;
     border-radius: 25px;
     font-weight: bolder;
+    width: fit-content;
+    padding: 5px 20px;
 }
-
-
 
 
 /*buttons*/
-.project-more-button,
-.list-view-button,
-.grid-view-button {
-    background-color:transparent;
-    border: none;
-    width: 30px;
-    height: 30px;
-}
-
 .project-more-button {
-    background-image: url("images/more.svg");
-    background-size: cover;
-    width: 20px;
-    height: 20px;
+    background-image: url("../images/more.svg");
 }
-
 .list-view-button {
-    background-image: url("images/menu.svg");
-    background-size: cover;
-    width: 20px;
-    height: 20px;
+    background-image: url("../images/menu.svg");
 }
 .grid-view-button {
-    background-image: url("images/menu_square.svg");
-    background-size: cover;
-    width: 20px;
-    height: 20px;
+    background-image: url("../images/menu_square.svg");
 }
 
 
-
-.projects-statistics-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.projects-statistics-data-container {
-    display: flex;
-    justify-content: flex-start;
-    column-gap: 20px;
+/*row view*/
+.project-item-wrapper-default {
+    width: 33.3%;
+    padding: 7px;
 }
 
-.projects-statistics-item > div:first-of-type {
-    font-weight: 700;
-}
-.projects-statistics-item > div:last-of-type {
-    color: #85848d;
-    font-size: 0.6em;
+.project-item-wrapper-row {
+    padding: 7px;
+    width: 100%;    
 }

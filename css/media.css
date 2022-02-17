@@ -1,6 +1,5 @@
-/*media*/
 @media screen and (max-width: 980px) {
-    .project-item-wrapper {
+    .project-item-wrapper-default {
         width: 50%;
     }
     .projects-statistics-data-container {
@@ -12,8 +11,7 @@
     .client-messages-container {
         display: none;
     }
-    .client-messages-button {
-        
+    .client-messages-open-button {
         display: block;
     }
     .header-container {
@@ -56,7 +54,7 @@
     .left-menu-container {
         display: none;
     }
-    .project-item-wrapper {
+    .project-item-wrapper-default {
         width: 100%;
     }
     .main-container {
@@ -68,6 +66,7 @@
    
 }
 
+/*container-wide*/
 .client-messages-container-wide  {
     display: block;
     transform: translateX(0);
