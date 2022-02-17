@@ -1,0 +1,201 @@
+/*container*/
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    margin: 15px;
+    padding: 25px 25px 0 25px;
+    flex: 2;
+    overflow: hidden;
+    width: 100%;
+}
+
+.projects-container-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+/*progress*/
+.project-item-progress {
+    font-weight: 700;
+}
+.project-item-progress > p:first-of-type {
+    text-align: start;
+}
+.project-item-progress > p:last-of-type {
+    text-align: end;
+}
+.progress-bar-wrapper { 
+    height: 5px;
+    width: 100%;
+    background-color: white;
+    margin: 2px 0;
+    border-radius: 5px;
+}
+.progress-bar {
+    background-color: #ff942e;
+    width: 60%;
+    height: 5px;
+    border-radius: inherit;
+}
+
+/*items-container*/
+.projects-items-container {
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-start;
+    flex-flow: row wrap;
+    overflow-y: auto;
+    height: 100%;
+}
+.projects-items-container  .project-item-wrapper:nth-child(2) .project-item {
+    background-color: #e9e7fd;
+}
+.projects-items-container > :nth-child(2) .days-left-sign {
+    color: #4f3ff0;
+}
+.projects-items-container > :nth-child(2) .progress-bar {
+    background-color: #4f3ff0;
+}
+.projects-items-container .project-item-wrapper:nth-child(3) .project-item {
+    background-color: #dbf6fd;
+}
+.projects-items-container > :nth-child(3) .days-left-sign {
+    color: #096c86;
+}
+.projects-items-container > :nth-child(3) .progress-bar {
+    background-color: #096c86;
+}
+.projects-items-container .project-item-wrapper:nth-child(4) .project-item {
+    background-color: #ffd3e2;
+}
+.projects-items-container > :nth-child(4) .days-left-sign {
+    color: #df3670;
+}
+.projects-items-container > :nth-child(4) .progress-bar {
+    background-color: #df3670;
+}
+
+.projects-items-container .project-item-wrapper:nth-child(5) .project-item {
+    background-color: #c8f7dc;
+}
+.projects-items-container > :nth-child(5) .days-left-sign {
+    color: #34c471;
+}
+.projects-items-container > :nth-child(5) .progress-bar {
+    background-color: #34c471;
+}
+
+.projects-items-container .project-item-wrapper:nth-child(6) .project-item {
+    background-color: #d5deff;
+}
+.projects-items-container > :nth-child(6) .days-left-sign {
+    color: #4067f9;
+}
+.projects-items-container > :nth-child(6) .progress-bar {
+    background-color: #4067f9;
+}
+
+
+
+
+/*project-item*/
+.project-item-wrapper {
+    width: 33.3%;
+    padding: 7px;
+}
+
+.project-item {
+    background-color: #fee4cb;
+    padding: 15px;
+    border-radius: 25px;
+    font-size: 0.6em;
+}
+
+.project-item-header {
+    display: flex;
+    justify-content: space-between;
+}
+.project-item-header > p:first-of-type {
+    color: #85848d;
+}
+.project-item-body {
+    text-align: center;
+    line-height: 1.5em;
+}
+.project-item-body::first-line {
+    font-weight: 600;
+}
+
+.project-item-footer {
+    display: flex;
+    justify-content: space-between;
+    border-top: white 1px solid;
+    padding: 10px 0 0 0;
+    color: #ff942e;
+}
+
+.days-left-sign {
+    background-color: #ffffff;
+    width: fit-content;
+    padding: 5px 20px;
+    border-radius: 25px;
+    font-weight: bolder;
+}
+
+
+
+
+/*buttons*/
+.project-more-button,
+.list-view-button,
+.grid-view-button {
+    background-color:transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+}
+
+.project-more-button {
+    background-image: url("images/more.svg");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+.list-view-button {
+    background-image: url("images/menu.svg");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+.grid-view-button {
+    background-image: url("images/menu_square.svg");
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.projects-statistics-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.projects-statistics-data-container {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 20px;
+}
+
+.projects-statistics-item > div:first-of-type {
+    font-weight: 700;
+}
+.projects-statistics-item > div:last-of-type {
+    color: #85848d;
+    font-size: 0.6em;
+}

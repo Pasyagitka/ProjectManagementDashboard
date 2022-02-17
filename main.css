@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #f3f6fd;
+    font-family: "DM Sans", sans-serif;
+    font-size: 21px;
+    color: #343242;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
+
+.portfolio-header {
+    font-weight: 700;
+}
+
+.main-container {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    padding: 15px 25px;
+    width: 100%;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1500px;
+    flex: 1;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+.client-messages-button {
+    background-color: #ffff;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    width: 30px;
+    height: 30px;
+    align-self: flex-end;
+    position: relative;
+    top: 30px;
+    display: none;
+}
+
+.client-messages-close-button {
+    background-color: transparent;
+    border: none;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
